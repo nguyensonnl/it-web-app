@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="app">
+      <form>
+        <div class="group">
+          <label>Danh mục sản phẩm</label>
+          <input type="text" class="cate" placeholder="Danh mục sản phẩm" />
+          <div class="error" style="color: red"></div>
+        </div>
+
+        <button class="btn-create">Tạo</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+      </table>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
