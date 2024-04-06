@@ -1,2 +1,7 @@
 +sql: mysql, postgresql
 +nosql: mongodb
+
+raw sql
+query builder
+orm(object relational mapping)
+odm(object document mapper)
