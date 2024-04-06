@@ -1,2 +1,5 @@
 page route
 app route
+
+#Setup
+npx create-next-app name-project
