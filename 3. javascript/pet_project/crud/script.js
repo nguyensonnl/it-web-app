@@ -67,13 +67,76 @@ function createCategory() {
   clearForm(inputElement);
 }
 
+function updatedCategory() {
+  const idCate = btnCreateElement.getAttribute("data-id");
+  const listCate = getListCate();
+
+  console.log(listCate);
+
+  if (listCate && listCate.length > 0) {
+    const updatedCate = listCate.map((item) => {
+      if (item.id === +idCate) {
+        return {
+          id: +idCate,
+          name: inputElement.value,
+        };
+      } else {
+        return item;
+      }
+    });
+    localStorage.setItem("category", JSON.stringify(updatedCate));
+    renderData();
+    btnCreateElement.classList.remove("edit");
+    btnCreateElement.removeAttribute("data-id");
+    btnCreateElement.textContent = "Tạo";
+    clearForm(inputElement);
+  }
+}
+
 function handleSubmitForm(e) {
   e.preventDefault();
   const isValidForm = validationForm();
   if (isValidForm) {
-    createCategory();
+    if (e.target.classList.contains("edit")) {
+      updatedCategory();
+    } else {
+      createCategory();
+    }
+  }
+}
+
+function handleAction(event) {
+  const clicked = event.target;
+  const listCate = getListCate();
+
+  if (clicked.classList.contains("delete")) {
+    const idCate = clicked.getAttribute("data-id");
+
+    if (listCate && listCate.length > 0) {
+      const updatedListCate = listCate.filter((item) => item.id !== +idCate);
+
+      localStorage.setItem("category", JSON.stringify(updatedListCate));
+      renderData();
+    }
+  }
+
+  if (clicked.classList.contains("edit")) {
+    const idCate = clicked.getAttribute("data-id");
+    const listCate = getListCate();
+
+    if (listCate && listCate.length > 0) {
+      const udpatedCate = listCate.find((item) => item.id === +idCate);
+      console.log(udpatedCate);
+
+      inputElement.value = udpatedCate.name;
+
+      btnCreateElement.textContent = "Update";
+      btnCreateElement.setAttribute("data-id", udpatedCate.id);
+      btnCreateElement.classList.add("edit");
+    }
   }
 }
 
 renderData();
 btnCreateElement.addEventListener("click", handleSubmitForm);
+tbodyElement.addEventListener("click", handleAction);
