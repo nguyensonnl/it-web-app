@@ -5,3 +5,5 @@ raw sql
 query builder
 orm(object relational mapping)
 odm(object document mapper)
+
+Các kiến thức về database
