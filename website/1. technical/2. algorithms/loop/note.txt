@@ -1,0 +1,3 @@
+- Giới hạn cái điều kiện để giải quyết vấn đề
+    - Biên cái hình mà ai cũng có thể làm được
+    - Dựa vào kiến thức mà anh đang có để giới hạn các câu lệnh để giải quyết vấn đề

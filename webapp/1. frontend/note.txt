@@ -1,0 +1,10 @@
+Các framework về SPA:
+- react(next)
+- vue(nuxt)
+- angular
+- svelte
+
+Các framework CSS
+
+
+re-render
