@@ -1,0 +1,3 @@
+- Lập trình hướng thủ tục
+- Lập trình hướng hàm
+- Lập trình hướng đối tượng
