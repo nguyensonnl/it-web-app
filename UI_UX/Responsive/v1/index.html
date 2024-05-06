@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <style>
+      .wrapper {
+        background-color: lightblue;
+        padding: 20px;
+      }
+
+      @media screen and (min-width: 576px) {
+        .wrapper {
+          background-color: red;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .wrapper {
+          background-color: blue;
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        .wrapper {
+          background-color: green;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .wrapper {
+          background-color: yellow;
+        }
+      }
+
+      /* Desktop first*/
+      /* .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .box1 {
+        padding: 20px;
+        background-color: lightcoral;
+        width: 30%;
+        margin-right: 5%;
+      }
+      .box2 {
+        padding: 20px;
+        background-color: lightgreen;
+        width: 60%;
+        margin-right: 5%;
+      }
+
+      @media screen and (max-width: 576px) {
+        .container {
+          display: block;
+        }
+        .box1,
+        .box2 {
+          width: 100%;
+        }
+      } */
+
+      /* Mobile first*/
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .box1 {
+        padding: 20px;
+        background-color: lightcoral;
+      }
+      .box2 {
+        padding: 20px;
+        background-color: lightgreen;
+      }
+
+      /* responsive */
+      @media screen and (min-width: 576px) {
+        .container {
+          display: flex;
+        }
+        .box1 {
+          width: 30%;
+          margin-right: 5%;
+        }
+        .box2 {
+          width: 60%;
+          margin-right: 5%;
+        }
+      }
+
+      .logo {
+        width: 200px;
+        border: 1px solid red;
+      }
+      .logo img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1.Responsive được tạo mặc định khi chỉ có HTML-->
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad pariatur
+      beatae quibusdam accusantium distinctio, nostrum similique architecto
+      vitae cum assumenda culpa ex eius tenetur rem quas quam. Laborum,
+      reprehenderit dolorem.
+    </p>
+
+    <!--- 2.Media Query-->
+    <div class="wrapper">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum
+      officia ex quae atque quia est rem deserunt! Distinctio ipsa ex dicta
+      cumque tenetur nostrum molestiae illo quisquam laboriosam laborum.
+    </div>
+
+    <!-- 3.Responsive với Flexbox-->
+    <div class="container">
+      <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+        exercitationem temporibus praesentium vero officia placeat iure
+        dignissimos quia sint nemo? Laudantium tenetur qui repudiandae libero
+        beatae consectetur ex numquam dignissimos?
+      </div>
+      <div class="box2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quae
+        deserunt quam veniam. Quas nobis vitae omnis dolorum qui! Corrupti
+        doloremque obcaecati sapiente aspernatur rerum? Facilis quisquam hic
+        illo molestiae?
+      </div>
+    </div>
+
+    <!-- 4. Responsive cho media-->
+    <div class="logo">
+      <img
+        src="https://images.unsplash.com/photo-1714782648154-ad341ee9bc19?q=80&w=1446&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />"
+    </div>
+  </body>
+</html>

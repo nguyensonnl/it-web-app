@@ -1,13 +1,10 @@
 /*
-Print1:
-
  ******
  *****
  ***
  **
  *
-
-*/
+ */
 
 function print1(n) {
   let starLine = "";
